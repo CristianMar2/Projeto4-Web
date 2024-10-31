@@ -1,0 +1,124 @@
+/* Estrutura e Layout Básico */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header, footer {
+    background-color: #222;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+h1, h2 {
+    margin: 0.5em 0;
+}
+
+/* Container Principal */
+main {
+    padding: 1em;
+}
+
+/* Seções */
+#about, #products, #cart, #faq, #contact {
+    margin-bottom: 2em;
+}
+
+/* Lista de Produtos */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.product {
+    flex: 1 1 calc(33.333% - 1em);
+    border: 1px solid #ddd;
+    padding: 1em;
+    text-align: center;
+    background-color: #f9f9f9;
+    transition: box-shadow 0.3s;
+}
+
+.product:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.price {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+/* Botão "Adicionar ao Carrinho" */
+.add-to-cart {
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #555;
+}
+
+/* Paginação */
+.pagination {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.pagination a {
+    margin: 0 0.5em;
+    color: #333;
+    text-decoration: none;
+}
+
+.pagination span {
+    font-weight: bold;
+}
+
+/* Formulário de Contato */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#contact label {
+    margin: 0.5em 0 0.2em;
+}
+
+#contact input, #contact textarea {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#contact button {
+    margin-top: 1em;
+    padding: 0.5em;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#contact button:hover {
+    background-color: #555;
+}
