@@ -11,6 +11,7 @@
     <header>
         <h1>Crish Games</h1>
         <p>Bem-vindo à melhor loja de jogos digitais para PC e consoles!</p>
+        <input type="text" id="searchBar" placeholder="Pesquisar jogo por nome...">
     </header>
 
     <main>
@@ -23,79 +24,71 @@
             <h2>Jogos Disponíveis</h2>
             <div class="product-list">
                 <!-- Estrutura para cada produto -->
-                <div class="product">
-                    <img src="img\farming.jpg" alt="Imagem do Farming">
+                <div class="product" data-name="Farming Simulator 25" data-price="194.99">
+                    <img src="img/farming.jpg" alt="Imagem do Farming">
                     <h3>Farming Simulator 25</h3>
                     <p>Farming Simulator 25 convida você a participar da gratificante vida na fazenda.</p>
                     <p class="price">R$ 194,99</p>
                     <button class="add-to-cart">Adicionar ao Carrinho</button>
                 </div>
 
-                <div class="product">
-                    <img src="img\sliter.jpg" alt="Imagem do Sliter">
+                <div class="product" data-name="Slitterhead" data-price="189.99">
+                    <img src="img/sliter.jpg" alt="Imagem do Sliter">
                     <h3>Slitterhead</h3>
                     <p>O incorpóreo "Hyoki" caça os "Cabeças-Rasgadas" devoradores de cérebros, que espreitam os becos de uma cidade iluminada por neon.</p>
                     <p class="price">R$ 189,99</p>
                     <button class="add-to-cart">Adicionar ao Carrinho</button>
                 </div>
-
-                <div class="product">
+                <div class="product" data-name="Sengoku Dynasty" data-price="88.99">
                     <img src="img\sengooku.jpg" alt="Imagem do Sengoku">
                     <h3>Sengoku Dynasty</h3>
                     <p>Sengoku Dynasty oferece a experiência definitiva no Japão feudal: construa vilas, expanda a sua comunidade e use o combate ou a economia para deixar a sua marca no mundo aberto.</p>
                     <p class="price">R$ 88,99</p>
                     <button class="add-to-cart">Adicionar ao Carrinho</button>
                 </div>
-
-                <div class="product">
+                <div class="product" data-name="EA Sports FC 25" data-price="299.00">
                     <img src="img\eafc.jpg" alt="Imagem do EAFC">
                     <h3>EA Sports FC 25</h3>
                     <p>O EA SPORTS FC™ 25 oferece mais maneiras de ganhar pelo clube.</p>
                     <p class="price">R$ 299,00</p>
                     <button class="add-to-cart">Adicionar ao Carrinho</button>
                 </div>
-
-                <div class="product">
+                <div class="product" data-name="Horizon Zero Dawn" data-price="249.50">
                     <img src="img\horizon.jpg" alt="Imagem do Horizon">
                     <h3>Horizon Zero Dawn™ Remastered</h3>
                     <p>Curta o aclamado Horizon Zero Dawn™ com recursos aprimorados e novos visuais incríveis.</p>
                     <p class="price">R$ 249,50</p>
                     <button class="add-to-cart">Adicionar ao Carrinho</button>
                 </div>
-
-                <div class="product">
+                <div class="product" data-name="Monospaced Lovers" data-price="59.99">
                     <img src="img\monospace.jpg" alt="Imagem do Monospaced">
                     <h3>Monospaced Lovers</h3>
                     <p>Monospaced Lovers é um plataformer exploratório sobre proximidade e distância.</p>
                     <p class="price">R$ 59,99</p>
                     <button class="add-to-cart">Adicionar ao Carrinho</button>
                 </div>
-
-                <div class="product">
+                <div class="product" data-name="FINAL FANTASY XVI" data-price="219.90">
                     <img src="img\fantasy.jpg" alt="Imagem do Final">
                     <h3>FINAL FANTASY XVI</h3>
                     <p>Esta é a história de Clive Rosfield, guerreiro que jura vingança contra o Eikon das trevas, Ifrit, entidade misteriosa que traz calamidade por onde passa.</p>
                     <p class="price">R$ 219,90</p>
                     <button class="add-to-cart">Adicionar ao Carrinho</button>
                 </div>
-
-                <div class="product">
+                <div class="product" data-name="DOOM Eternal" data-price="149.00">
                     <img src="img\doom.jpg" alt="Imagem do Doom">
                     <h3>DOOM Eternal</h3>
                     <p>Torne-se o Slayer em uma campanha épica para um jogador e derrote demônios entre dimensões para impedir a derradeira destruição da humanidade.</p>
                     <p class="price">R$ 149,00</p>
                     <button class="add-to-cart">Adicionar ao Carrinho</button>
                 </div>
-
-                <div class="product">
+                <div class="product" data-name="Sea of Solitude" data-price="109.00">
                     <img src="img\sea.jpg" alt="Imagem do Sea">
                     <h3>Sea of Solitude</h3>
                     <p>Explore um mundo belo e envolvente de escuridão e luz e descubra o que significa ser humano.</p>
                     <p class="price">R$ 109,00</p>
                     <button class="add-to-cart">Adicionar ao Carrinho</button>
                 </div>
-
-                <div class="product">
+                <div class="product" data-name="Dying Light" data-price="50.99">
                     <img src="img/dying.jpg" alt="Imagem do Dying">
                     <h3>Dying Light</h3>
                     <p>Um jogo de ação e sobrevivência em primeira pessoa em um mundo aberto pós-apocalíptico tomado por zumbis comedores de carne humana.</p>
@@ -115,7 +108,9 @@
 
         <section id="cart">
             <h2>Carrinho de Compras</h2>
-            <p>Seu carrinho está vazio.</p>
+            <div id="cartItems">Seu carrinho está vazio.</div>
+            <p id="totalPrice">Total: R$ 0,00</p>
+            <button id="checkoutButton">Finalizar Compra</button>
         </section>
 
         <section id="faq">
@@ -134,7 +129,7 @@
     <footer>
         <section id="contact">
             <h2>Contato</h2>
-            <form>
+            <form id="contactForm">
                 <label for="name">Nome:</label>
                 <input type="text" id="name" name="name" required>
 
@@ -150,5 +145,72 @@
         <hr>
         <p>&copy; 2024 Crish Games. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        // Função de busca
+        document.getElementById("searchBar").addEventListener("input", function() {
+            const query = this.value.toLowerCase();
+            const products = document.querySelectorAll(".product");
+            products.forEach(product => {
+                const name = product.getAttribute("data-name").toLowerCase();
+                product.style.display = name.includes(query) ? "block" : "none";
+            });
+        });
+
+        // Carrinho de Compras
+        const cartItems = [];
+        const cartItemsContainer = document.getElementById("cartItems");
+        const totalPriceElement = document.getElementById("totalPrice");
+
+        document.querySelectorAll(".add-to-cart").forEach(button => {
+            button.addEventListener("click", function() {
+                const product = button.closest(".product");
+                const name = product.getAttribute("data-name");
+                const price = parseFloat(product.getAttribute("data-price"));
+                const imageSrc = product.querySelector("img").src;
+
+                const cartItem = { name, price, imageSrc };
+                cartItems.push(cartItem);
+                updateCart();
+            });
+        });
+
+        function updateCart() {
+            cartItemsContainer.innerHTML = "";
+            let total = 0;
+
+            cartItems.forEach((item, index) => {
+                total += item.price;
+
+                const itemElement = document.createElement("div");
+                itemElement.className = "cart-item";
+                itemElement.innerHTML = `
+                    <img src="${item.imageSrc}" alt="${item.name}" style="width: 50px; height: auto;">
+                    <span>${item.name}</span>
+                    <span>R$ ${item.price.toFixed(2)}</span>
+                    <button onclick="removeFromCart(${index})">Remover</button>
+                `;
+                cartItemsContainer.appendChild(itemElement);
+            });
+
+            totalPriceElement.textContent = `Total: R$ ${total.toFixed(2)}`;
+        }
+
+        function removeFromCart(index) {
+            cartItems.splice(index, 1);
+            updateCart();
+        }
+
+        document.getElementById("checkoutButton").addEventListener("click", function() {
+            alert("A funcionalidade de finalizar compra ainda não está disponível.");
+        });
+
+        // Formulário de Contato
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Email enviado com sucesso!");
+            this.reset();
+        });
+    </script>
 </body>
 </html>
